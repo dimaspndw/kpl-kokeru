@@ -17,7 +17,7 @@ class PegawaiController extends Controller
     public function index()
     {
         $employees = User::where('id','>', 1)->get();
-        Alert::success('Success Title', 'Success Message');
+        // Alert::success('Success Title', 'Success Message');
         return view('content.pegawai.index',compact('employees'));
     }
 
