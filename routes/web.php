@@ -23,7 +23,7 @@ Auth::routes();
 
 //admin
 Route::middleware('role:admin')->get('/dashboard', [App\Http\Controllers\HomeController::class, 'admin'])->name('dashboard');
-Route::resource('pegawai', App\Http\Controllers\PegawaiController::class);
+Route::middleware('role:admin')->resource('pegawai', App\Http\Controllers\PegawaiController::class);
 
 //cleaner
 Route::middleware('role:cleaner')->get('/home', [App\Http\Controllers\HomeController::class, 'cs'])->name('home');
