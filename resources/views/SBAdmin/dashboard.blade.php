@@ -99,7 +99,7 @@
 
       <!-- Content Row -->
       <div class="row">
-         @for ($i = 1; $i <= 9; $i++) {{-- cards --}} <div class="col-sm-4 mb-2 mt-3">
+         @for ($i = 1; $i <= 20; $i++) {{-- cards --}} <div class="col-sm-3 mb-2 mt-3">
             <div class="card shadow-sm">
                <div class="card-header bg-warning content-center">
                   <i class="fab fa-behance icon text-white my-4 display-4"></i>
