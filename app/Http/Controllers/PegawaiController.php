@@ -16,9 +16,9 @@ class PegawaiController extends Controller
      */
     public function index()
     {
-        $employees = User::where('id','>', 1)->get();
+        $employees = User::where('id', '>', 1)->get();
         // Alert::success('Success Title', 'Success Message');
-        return view('content.pegawai.index',compact('employees'));
+        return view('content.pegawai.index', compact('employees'));
     }
 
     /**
@@ -40,7 +40,7 @@ class PegawaiController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "name" =>'required',
+            "name" => 'required',
             "email" => 'required|unique:users',
             "password" => 'required'
         ]);
@@ -52,18 +52,7 @@ class PegawaiController extends Controller
         ]);
         $insertQ->assignRole('cleaner');
 
-        return redirect('/pegawai')->with('toast_success','Pegawai Berhasil di Daftarkan');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User $user)
-    {
-        //
+        return redirect('/pegawai')->with('toast_success', 'Pegawai Berhasil di Daftarkan');
     }
 
     /**
@@ -76,7 +65,6 @@ class PegawaiController extends Controller
     {
         $editQ = User::find($id);
         return view('content.pegawai.edit', compact('editQ'));
-        
     }
 
     /**
@@ -89,11 +77,11 @@ class PegawaiController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            "name" =>'required',
+            "name" => 'required',
             "email" => 'required',
         ]);
 
-        $updateQ = User::where('id',$id)->update([
+        $updateQ = User::where('id', $id)->update([
             'name' => $request["name"],
             'email' => $request["email"],
         ]);
@@ -109,6 +97,6 @@ class PegawaiController extends Controller
     public function destroy($id)
     {
         User::destroy($id);
-        return redirect('/pegawai')->with('toast_success','User Berhasil DiHapus');
+        return redirect('/pegawai')->with('toast_success', 'User Berhasil DiHapus');
     }
 }

@@ -12,11 +12,11 @@ class RuangController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    
+
     public function index()
     {
         $rooms = Ruang::get()->sortBy('nama');
-        return view('content.ruang.index',compact('rooms'));
+        return view('content.ruang.index', compact('rooms'));
     }
 
     /**
@@ -38,7 +38,7 @@ class RuangController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "nama" =>'required|unique:ruang',
+            "nama" => 'required|unique:ruang',
             "deskripsi" => 'required',
         ]);
 
@@ -47,19 +47,7 @@ class RuangController extends Controller
             "deskripsi" => $request["deskripsi"],
         ]);
 
-        return redirect('/ruang')->with('toast_success','Ruang Berhasil di Tambahkan');
-
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Ruang  $ruang
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Ruang $ruang)
-    {
-        //
+        return redirect('/ruang')->with('toast_success', 'Ruang Berhasil di Tambahkan');
     }
 
     /**
@@ -84,16 +72,16 @@ class RuangController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            "nama" =>'required|unique:ruang',
+            "nama" => 'required|unique:ruang',
             "deskripsi" => 'required',
         ]);
 
-        $UpdateQ = Ruang::where('id',$id)->update([
+        $UpdateQ = Ruang::where('id', $id)->update([
             "nama" => $request["nama"],
             "deskripsi" => $request["deskripsi"],
         ]);
 
-        return redirect('/ruang')->with('toast_success','Data Ruang Telah diubah!');
+        return redirect('/ruang')->with('toast_success', 'Data Ruang Telah diubah!');
     }
 
     /**
@@ -105,6 +93,6 @@ class RuangController extends Controller
     public function destroy($id)
     {
         Ruang::destroy($id);
-        return redirect('/ruang')->with('toast_info','Ruang Berhasil DiHapus');
+        return redirect('/ruang')->with('toast_info', 'Ruang Berhasil DiHapus');
     }
 }
