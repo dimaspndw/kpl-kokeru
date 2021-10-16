@@ -57,10 +57,10 @@ class RuangController extends Controller
      * @param  \App\Models\Ruang  $ruang
      * @return \Illuminate\Http\Response
      */
-    public function show(Ruang $ruang)
-    {
-        //
-    }
+    // public function show(Ruang $ruang)
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for editing the specified resource.
