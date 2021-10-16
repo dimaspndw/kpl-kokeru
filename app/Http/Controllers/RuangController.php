@@ -77,7 +77,7 @@ class RuangController extends Controller
             "deskripsi" => 'required',
         ]);
 
-        $UpdateQ = Ruang::where('id',$id)->update([
+        Ruang::where('id',$id)->update([
             "nama" => $request["nama"],
             "deskripsi" => $request["deskripsi"],
         ]);
