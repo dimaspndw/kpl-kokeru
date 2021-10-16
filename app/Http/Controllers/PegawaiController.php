@@ -82,7 +82,7 @@ class PegawaiController extends Controller
             "email" => 'required',
         ]);
 
-        $updateQ = User::where('id',$id)->update([
+        User::where('id',$id)->update([
             'name' => $request["name"],
             'email' => $request["email"],
         ]);
