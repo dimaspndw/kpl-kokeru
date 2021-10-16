@@ -52,17 +52,6 @@ class RuangController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Ruang  $ruang
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Ruang $ruang)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Ruang  $ruang
