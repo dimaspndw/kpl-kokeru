@@ -30,7 +30,7 @@ class HomeController extends Controller
         return view('SBAdmin/dashboard');
     }
 
-    public function cs()
+    public function CleaningService()
     {
         return view('SBAdmin/panel');
     }
