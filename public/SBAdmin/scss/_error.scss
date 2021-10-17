@@ -17,6 +17,7 @@
     }
   }
 }
+
 .error:after {
   content: attr(data-text);
   position: absolute;
@@ -38,6 +39,7 @@
     }
   }
 }
+
 .error:before {
   content: attr(data-text);
   position: absolute;

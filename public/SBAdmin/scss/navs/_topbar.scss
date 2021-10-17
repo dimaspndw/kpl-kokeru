@@ -1,16 +1,20 @@
 // Topbar
 .topbar {
   height: $topbar-base-height;
+  
   #sidebarToggleTop {
     height: 2.5rem;
     width: 2.5rem;
+    
     &:hover {
       background-color: $gray-200;
     }
+    
     &:active {
       background-color: $gray-300;
     }
   }
+
   .navbar-search {
     width: 25rem;
     input {
@@ -18,12 +22,14 @@
       height: auto;
     }
   }
+  
   .topbar-divider {
     width: 0;
     border-right: 1px solid $border-color;
     height: calc(#{$topbar-base-height} - 2rem);
     margin: auto 1rem;
   }
+  
   .nav-item {
     .nav-link {
       height: $topbar-base-height;
@@ -34,10 +40,12 @@
         outline: none;
       }
     }
+    
     &:focus {
       outline: none;
     }
   }
+  
   .dropdown {
     position: static;
     .dropdown-menu {
@@ -45,10 +53,12 @@
       right: $grid-gutter-width / 2;
     }
   }
+  
   .dropdown-list {
     padding: 0;
     border: none;
     overflow: hidden;
+    
     .dropdown-header {
       background-color: $primary;
       border: 1px solid $primary;
@@ -56,6 +66,7 @@
       padding-bottom: 0.75rem;
       color: $white;
     }
+    
     .dropdown-item {
       white-space: normal;
       padding-top: 0.5rem;
@@ -64,14 +75,17 @@
       border-right: 1px solid $border-color;
       border-bottom: 1px solid $border-color;
       line-height: 1.3rem;
+     
       .dropdown-list-image {
         position: relative;
         height: 2.5rem;
         width: 2.5rem;
+        
         img {
           height: 2.5rem;
           width: 2.5rem;
         }
+        
         .status-indicator {
           background-color: $gray-200;
           height: 0.75rem;
@@ -83,9 +97,11 @@
           border: .125rem solid $white;
         }
       }
+      
       .text-truncate {
         max-width: 10rem;
       }
+      
       &:active {
         background-color: $gray-200;
         color: $gray-900;
@@ -100,6 +116,7 @@
         right: 0;
       }
     }
+    
     .dropdown-list {
       width: 20rem !important;
       .dropdown-item {
