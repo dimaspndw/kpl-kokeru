@@ -33,7 +33,7 @@ Route::middleware('role:admin')->group(function () {
 });
 //cleaner
 Route::middleware('role:cleaner')->group(function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'cs'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'CleaningService'])->name('home');
 });
 
 
