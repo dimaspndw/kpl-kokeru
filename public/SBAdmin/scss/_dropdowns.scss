@@ -5,6 +5,7 @@
     font-size: $dropdown-font-size;
     .dropdown-header {
       @extend .text-uppercase;
+      
       font-weight: 800;
       font-size: 0.65rem;
       color: $gray-500;
